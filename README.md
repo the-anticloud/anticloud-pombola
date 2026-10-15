@@ -1,247 +1,92 @@
 # POMBOLA
 
-**Category:** GOVERNMENT
-**Status:** Active development with Anticloud overlay
+> Anticloud offline package — upstream: mysociety/pombola @ `master`.
 
 ## What This Project Does
 
-POMBOLA is an open-source project in the GOVERNMENT category.
+Open-source Python package in the scan_results_all.txt category, rebuilt with the Anticloud 12-improvement overlay.
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the GOVERNMENT domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
+## Upstream README
 
-The project addresses key challenges in GOVERNMENT by providing:
+# Pombola
 
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+This web app allows you to store and share information on public figures,
+especially politicians.
 
-## Installation
+For detailed background about the project as of 2018 please see
+[docs/BACKGROUND.md](docs/BACKGROUND.md). For an overview of the system see
+[docs/OVERVIEW.md](docs/OVERVIEW.md).
 
-### Prerequisites
 
-Before installing POMBOLA, ensure you have the following:
+## Installing
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
+Please see [docs/INSTALL.md](docs/INSTALL.md)
 
-### From Source
+To change your site's look and feel please see the [styling notes](docs/STYLING_NOTES.md).
 
-To build from source, clone the repository and follow the
-upstream build instructions:
+For software developers, you can see information about running
+the tests in [docs/TESTING.md](docs/TESTING.md).
 
-```bash
-git clone https://github.com/the-anticloud/OPENMRS_CORE.git/pombola.git
-cd pombola
-make
-sudo make install
-```
+## Troubleshooting
 
-### Package Managers
+Please see [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) file
 
-Depending on your platform, POMBOLA may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
+## Future
 
-## Usage
+The Pombola codebase was originally written for the Kenyan site
+[mzalendo.com](http://info.mzalendo.com). It has since been modified to support
+other sites around the world, notably several in Africa.
 
-### Basic Usage
+We want the code to be easy to use for other installations, but currently there are some rough edges.
 
-After installation, POMBOLA can be invoked as follows:
+## Acknowledgements
 
-```bash
-pombola --help
-pombola
-```
+We are very grateful for the funding that has made development
+of Pombola possible, in particular the generous support from:
 
-### Common Operations
+* [The Indigo Trust](http://indigotrust.org.uk/)
+* [The Omidyar Network](https://www.omidyar.com/)
 
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
+Thanks also to [Browserstack](https://www.browserstack.com/) who
+let us use their web-based cross-browser testing tools for this
+project.
 
-### Examples
+## mySociety.org Software Licensing
 
-```bash
-pombola --input /path/to/input --output /path/to/output
-pombola --config /path/to/config.yaml
-pombola --verbose --log-level debug
-```
+Most of the software in this directory is Copyright (c) 2004-2019 UK
+Citizens Online Democracy.
 
-## API
+Unless otherwise stated in particular files or directories, this
+software is free software; you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-### Overview
+Can you explain briefly what the GNU Affero GPL is? We offer the
+source code of our websites to our users. The GNU Affero GPL has the
+requirement that anyone else using that code for their own websites
+also does the courtesy of offering the source code to their users.
 
-POMBOLA exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
+Why not use the GPL? The GPL guarantees that anyone who gets a binary
+version of the software also gets the source code so they can modify
+it. Since users of websites never get the binary, just HTML pages, it
+is no better a license than a BSD style license would be for them.
+For this reason, we use the GNU Affero GPL.
 
-### Endpoints
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Affero General Public License for more details.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
+Information about the GNU Affero GPL:
+http://www.fsf.org/licensing/licenses/agpl-3.0.html
 
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-POMBOLA uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/pombola/config.yaml
-- **Windows:** %APPDATA%\pombola\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **POMBOLA_LOG_LEVEL** - Override log level
-- **POMBOLA_CONFIG** - Path to custom config file
-- **POMBOLA_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to POMBOLA are welcome. Please follow
-these guidelines:
-
-1. **Fork the repository** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
+A copy of the GNU Affero General Public License can be found in [LICENSE.txt](/LICENSE.txt).
 
 ## License
 
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
+## Verification
 
-## Upstream
-
-**SHA-256:** `cb0f4a75aea91a471bb8b64921c80f19adf1a9f1`
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-
-## Benchmarks
-
-Benchmark results are recorded in BENCH.json.
-
-Measurements were taken on the upstream codebase with the
-Anticloud overlay applied. Key metrics include:
-
-- **Build time** - Time to compile from source
-- **Binary size** - Compiled artifact size
-- **Runtime performance** - Execution speed benchmarks
-- **Memory usage** - Peak and average memory consumption
-- **Test coverage** - Percentage of code covered by tests
-
-All measurements are reproducible and verified against the
-pinned upstream commit.
-
-## Additional Information
-
-This project is part of the Anticloud ecosystem, providing
-GOVERNMENT functionality with measured performance characteristics.
-
-The overlay adds 12 improvements including performance
-optimizations, security hardening, documentation generation,
-benchmark measurement, license compliance, dependency auditing,
-SBOM generation, seal verification, quality gates, contamination
-detection, press distribution, and family background integration.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
