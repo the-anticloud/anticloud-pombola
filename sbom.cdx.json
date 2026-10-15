@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:4ecb146b-7a30-500d-b292-36e62fb4ea80",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-09T09:05:22Z",
+    "component": {
+      "type": "application",
+      "name": "POMBOLA",
+      "version": "cb0f4a75aea9",
+      "bom-ref": "pkg:generic/anticloud/POMBOLA@cb0f4a75aea9",
+      "purl": "pkg:generic/anticloud/POMBOLA@cb0f4a75aea9",
+      "licenses": [
+        {
+          "license": {
+            "id": "NOASSERTION"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "cb0f4a75aea91a47"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}
